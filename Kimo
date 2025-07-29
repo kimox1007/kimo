@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تطبيق كيمو</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 100px; }
+    input { padding: 10px; margin: 10px; font-size: 18px; }
+    button { padding: 10px 20px; font-size: 18px; }
+  </style>
+</head>
+<body>
+
+  <h2>أدخل كلمة المرور للدخول</h2>
+  <input type="password" id="password" placeholder="كلمة المرور">
+  <br>
+  <button onclick="checkPassword()">دخول</button>
+
+  <p id="message"></p>
+
+  <script>
+    function checkPassword() {
+      const correctPassword = "kimo2025";  // ← دي الكلمة السرية
+      const input = document.getElementById("password").value;
+
+      if (input === correctPassword) {
+        document.getElementById("message").innerHTML = "✅ تم الدخول بنجاح!";
+      } else {
+        document.getElementById("message").innerHTML = "❌ كلمة مرور خاطئة!";
+      }
+    }
+  </script>
+
+</body>
+</html>
